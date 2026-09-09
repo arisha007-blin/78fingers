@@ -125,18 +125,72 @@
     </section>
 
     <!-- Секция: Репертуар -->
-    <section id="repertoire">
-        <h2>Мой репертуар</h2>
-        <p>Выбирайте любую песню и подходите ко мне:</p>
-        <ul>
-            <li>🎵 Кино — Звезда по имени Солнце</li>
-            <li>🎵 Жуки — Батарейка</li>
-            <li>🎵 Сплин — Выхода нет</li>
-            <li>🎵 Земфира — Искала</li>
-            <li>🎵 Ария — Беспечный ангел</li>
-        </ul>
-    </section>
+<section id="repertoire">
+    <h2>Мой репертуар</h2>
+    <p>Выбирайте любую песню и подходите ко мне на улице:</p>
 
+    <h3 style="color: #c0c0c0; text-align: left; margin-top: 30px;">Каверы и любимые треки</h3>
+    <ul class="repertoire-list">
+        <li>🎵 Сплин — Выхода нет</li>
+        <li>🎵 Баста — Сансара</li>
+        <li>🎵 Ария — Потерянный рай</li>
+        <li>🎵 Чайф — Не со мной</li>
+        <li>🎵 Beyoncé — Halo</li>
+        <li>🎵 Жуки — Батарейка</li>
+        <li>🎵 Папин олимпос — Темно-оранжевый загат</li>
+        <li>🎵 Кипелов (Ария) — Я свободен</li>
+        <li>🎵 Rozhden — Знаешь</li>
+        <li>🎵 Би-2, Алексей Понамарев — Мы не ангелы</li>
+        <li>🎵 Дайте танк(!) — Утро</li>
+        <li>🎵 Нервы — Счастье</li>
+        <li>🎵 Жуки — Танкист</li>
+        <li>🎵 Ария — Штиль</li>
+        <li>🎵 Ляпис Трубецкой — Евпатория</li>
+        <li>🎵 Рита Дакота — Дети рейва</li>
+        <li>🎵 Мураками — 0 км</li>
+        <li>🎵 Гости из будущего — Лучшее в тебе</li>
+        <li>🎵 Lumen — Гореть</li>
+        <li>🎵 Ляпис Трубецкой — В платье белом</li>
+        <li>🎵 Imagine Dragons — Radioactive</li>
+        <li>🎵 Звери — Районы-кварталы</li>
+        <li>🎵 Слот — Круги на воде</li>
+        <li>🎵 Нервы — Кофе мой друг</li>
+        <li>🎵 Imagine Dragons — Demons</li>
+        <li>🎵 Сектор Газа — Лирика</li>
+        <li>🎵 Король и Шут — Проклятый старый дом</li>
+        <li>🎵 Король и Шут — Кукла колдуна</li>
+        <li>🎵 Anastacia & Ben Moody — Everything Burns</li>
+        <li>🎵 Бумбокс — Вахтёрам</li>
+        <li>🎵 Сектор Газа — Туман</li>
+        <li>🎵 Би-2 & Чичерина — Мой рок-н-ролл</li>
+    </ul>
+
+    <h3 style="color: #c0c0c0; text-align: left; margin-top: 40px;">Наши песни</h3>
+    <ul class="repertoire-list">
+        <li>🎸 Дыши со мной</li>
+        <li>🎸 Бескрайний космос</li>
+        <li>🎸 Фонари</li>
+    </ul>
+</section>
+
+<style>
+    /* Красивый список репертуара в два столбца на компьютере и в один на телефоне */
+    .repertoire-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 10px 20px;
+        text-align: left;
+        padding: 0;
+    }
+    .repertoire-list li {
+        background: #161616;
+        padding: 12px 15px;
+        border-radius: 8px;
+        border: 1px solid #262626;
+        color: #d1d1d1;
+        font-size: 16px;
+    }
+</style>
     <!-- Секция: Поддержка -->
     <section id="support">
         <h2>Поддержать творчество</h2>
