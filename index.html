@@ -375,6 +375,108 @@
         <a href="ВАША_ССЫЛКА_НА_BOOSTY" class="btn">Мой Boosty 🎸</a>
     </section>
 
+    
+    <!-- Секция: Кейс с песнями в стиле CS:GO -->
+<section id="case-opening" style="margin: 40px auto; padding: 30px 20px; background: #161616; border-radius: 12px; border: 1px solid #333; max-width: 650px; text-align: center;">
+    <h2 style="background: linear-gradient(to right, #8a8a8a, #ffffff, #8a8a8a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-top: 0;">Сложно выбрать?</h2>
+    <p style="color: #8a8a8a; font-size: 14px; margin-bottom: 20px;">Откройте музыкальный сундук и доверьтесь случайному треку!</p>
+
+    <!-- Интерактивный сундук -->
+    <div id="chest-container" style="margin-bottom: 25px; cursor: pointer;" onclick="openCase()">
+        <div id="chest-icon" style="font-size: 55px; transition: transform 0.2s;">🎁</div>
+        <p id="chest-status" style="color: #c0c0c0; font-weight: bold; margin-top: 8px;">Нажмите на сундук, чтобы открыть</p>
+    </div>
+
+    <!-- Окно рулетки (лента прокрутки) -->
+    <div class="case-window" style="position: relative; width: 100%; height: 90px; background: #0b0b0b; border: 2px solid #444; border-radius: 8px; overflow: hidden; display: none;">
+        <!-- Красный указатель по центру -->
+        <div style="position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #ff4757; transform: translateX(-50%); z-index: 10;"></div>
+        
+        <!-- Лента с песнями -->
+        <div id="case-track" style="position: absolute; display: flex; align-items: center; height: 100%; will-change: transform;">
+        </div>
+    </div>
+
+    <div id="case-result" style="margin-top: 20px; font-size: 20px; font-weight: bold; color: #ffffff; min-height: 30px;"></div>
+</section>
+
+<script>
+    const caseSongs = [
+        "Сплин — Выхода нет",
+        "Баста — Сансара",
+        "Ария — Потерянный рай",
+        "Чайф — Не со мной",
+        "Beyoncé — Halo",
+        "Жуки — Батарейка",
+        "Папин олимпос — Темно-оранжевый закат",
+        "Кипелов — Я свободен",
+        "Rozhden — Знаешь",
+        "Би-2 — Мы не ангелы",
+        "Дайте танк(!) — Утро",
+        "Нервы — Счастье",
+        "Король и Шут — Кукла колдуна",
+        "Бумбокс — Вахтёрам"
+    ];
+
+    let isOpening = false;
+
+    function openCase() {
+        if (isOpening) return;
+        isOpening = true;
+
+        const track = document.getElementById('case-track');
+        const resultDiv = document.getElementById('case-result');
+        const chestIcon = document.getElementById('chest-icon');
+        const chestStatus = document.getElementById('chest-status');
+        const caseWindow = document.querySelector('.case-window');
+        
+        // Меняем вид на "открытый сундук / процесс"
+        chestIcon.innerText = "🔓✨";
+        chestStatus.innerText = "Сундук открывается...";
+        caseWindow.style.display = 'block';
+        resultDiv.innerText = "";
+        
+        // Генерируем рандомную ленту элементов
+        let fullList = [];
+        for (let i = 0; i < 6; i++) {
+            const shuffled = [...caseSongs].sort(() => Math.random() - 0.5);
+            fullList = fullList.concat(shuffled);
+        }
+        
+        const winningIndex = 40; 
+        const winningSong = caseSongs[Math.floor(Math.random() * caseSongs.length)];
+        fullList[winningIndex] = winningSong;
+
+        let trackHTML = '';
+        fullList.forEach(song => {
+            trackHTML += `<div style="min-width: 200px; height: 70px; margin: 0 10px; background: #1a1a1a; border: 1px solid #333; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #d1d1d1; font-size: 14px; padding: 0 10px; text-align: center; box-sizing: border-box;">🎵 ${song}</div>`;
+        });
+        track.innerHTML = trackHTML;
+        
+        // Сбрасываем позицию
+        track.style.transition = 'none';
+        track.style.transform = 'translateX(0px)';
+        
+        setTimeout(() => {
+            const itemWidth = 220; // 200px ширина + 20px отступы
+            const centerOffset = caseWindow.clientWidth / 2 - itemWidth / 2;
+            const targetX = -(winningIndex * itemWidth) + centerOffset;
+            
+            track.style.transition = 'transform 4s cubic-bezier(0.08, 0.82, 0.17, 1)';
+            track.style.transform = `translateX(${targetX}px)`;
+        }, 50);
+
+        // Итог прокрутки
+        setTimeout(() => {
+            chestIcon.innerText = "🏆🎁";
+            chestStatus.innerText = "Нажмите, чтобы открыть еще раз";
+            resultDiv.innerHTML = `🎉 Выпал трек: <span style="color: #ffffff; text-shadow: 0 0 10px rgba(255,255,255,0.8);">${winningSong}</span>`;
+            isOpening = false;
+        }, 4100);
+    }
+</script>
+    
+
     <!-- Футер с нижней картинкой и дублем меню -->
     <footer>
         <img src="footer.jpg" alt="Нижний музыкальный баннер">
@@ -385,6 +487,8 @@
         </div>
         <p style="color: #555; font-size: 14px;">© 2026 Уличный музыкант. Спасибо за поддержку!</p>
     </footer>
+
+    
 
 </body>
 </html>
