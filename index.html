@@ -2,38 +2,159 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <!-- Эта строчка делает сайт адаптивным для телефонов: -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Уличный музыкант | Мой репертуар</title>
+    <title>Уличный музыкант</title>
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 20px; color: #333; }
-        ul { list-style-type: none; padding: 0; line-height: 1.8; }
-        .btn { display: inline-block; margin: 10px; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; color: white; }
-        .donate { background: #10B981; }
-        .boosty { background: #F15F2C; }
-        .social { background: #3B82F6; }
+        /* Плавная прокрутка для ссылок в меню */
+        html { scroll-behavior: smooth; }
+
+        /* Черный элегантный фон */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #0b0b0b; /* Глубокий черный */
+            color: #d1d1d1; /* Светло-серый текст */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Адаптивные картинки - чтобы не сплющивались на телефоне */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Серебряные заголовки */
+        h1, h2 {
+            /* Эффект серебряного блеска */
+            background: linear-gradient(to right, #8a8a8a, #ffffff, #8a8a8a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0px 2px 4px rgba(255, 255, 255, 0.1);
+            margin-top: 40px;
+        }
+
+        /* Меню навигации */
+        nav {
+            background-color: #1a1a1a;
+            padding: 15px 0;
+            position: sticky; /* Прилипает к верху при прокрутке */
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #333;
+        }
+
+        nav a {
+            color: #c0c0c0; /* Серебряный цвет */
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Секции с текстом */
+        section {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Список песен */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            line-height: 2;
+            font-size: 18px;
+        }
+
+        /* Стильные серебряные кнопки */
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            color: #0b0b0b !important;
+            background: linear-gradient(to right, #c0c0c0, #ffffff);
+            border: none;
+        }
+
+        /* Футер (низ сайта) */
+        footer {
+            background-color: #0b0b0b;
+            padding-bottom: 30px;
+        }
+
+        .footer-nav { margin: 20px 0; }
+        .footer-nav a { color: #8a8a8a; text-decoration: none; margin: 0 10px; }
+
+        /* Делаем меню столбиком на совсем узких телефонах */
+        @media (max-width: 400px) {
+            nav a { display: block; margin: 10px 0; }
+        }
     </style>
 </head>
 <body>
-    <h1>Привет! Я уличный музыкант 🎸</h1>
-    <p>Спасибо, что остановились послушать. Ваша поддержка помогает мне творить!</p>
 
-    <h2>Мой репертуар</h2>
-    <p>Заказывайте любую песню:</p>
-    <ul>
-        <li>🎵 Кино — Звезда по имени Солнце</li>
-        <li>🎵 Жуки — Батарейка</li>
-        <li>🎵 Сплин — Выхода нет</li>
-        <li>🎵 Сплин — Выхода нет</li>
-        <li>🎵 Сплин — Выхода нет</li>
-        <li>🎵 Сплин — Выхода нет</li>
-        <li>🎵 Сплин — Выхода нет</li>
-    </ul>
+    <!-- Шапка с верхней картинкой -->
+    <header>
+        <img src="header.jpg" alt="Музыкальный баннер">
+    </header>
 
-    <h2>Поддержать меня</h2>
-    <a href="ВАША_ССЫЛКА_НА_ДОНАТЫ" class="btn donate">Отправить чаевые ☕</a>
+    <!-- Главное меню -->
+    <nav>
+        <a href="#about">Обо мне</a>
+        <a href="#repertoire">Репертуар</a>
+        <a href="#support">Поддержать</a>
+    </nav>
 
-    <h2>Мои соцсети</h2>
-    <a href="ВАША_ССЫЛКА_НА_BOOSTY" class="btn boosty">Подписаться на Boosty</a>
-    <a href="ВАША_ССЫЛКА_НА_TELEGRAM_ИЛИ_VK" class="btn social">Мой Telegram</a>
+    <!-- Секция: Обо мне -->
+    <section id="about">
+        <h1>Уличный музыкант</h1>
+        <p>Привет! Спасибо, что остановились послушать. Музыка — это моя жизнь, а улица — моя главная сцена. Здесь вы можете посмотреть мой репертуар, заказать песню или поддержать мое творчество.</p>
+    </section>
+
+    <!-- Секция: Репертуар -->
+    <section id="repertoire">
+        <h2>Мой репертуар</h2>
+        <p>Выбирайте любую песню и подходите ко мне:</p>
+        <ul>
+            <li>🎵 Кино — Звезда по имени Солнце</li>
+            <li>🎵 Жуки — Батарейка</li>
+            <li>🎵 Сплин — Выхода нет</li>
+            <li>🎵 Земфира — Искала</li>
+            <li>🎵 Ария — Беспечный ангел</li>
+        </ul>
+    </section>
+
+    <!-- Секция: Поддержка -->
+    <section id="support">
+        <h2>Поддержать творчество</h2>
+        <!-- НЕ ЗАБУДЬТЕ ВСТАВИТЬ СВОИ ССЫЛКИ ВМЕСТО ТЕКСТА В КАВЫЧКАХ -->
+        <a href="ВАША_ССЫЛКА_НА_ДОНАТЫ" class="btn">Отправить чаевые ☕</a>
+        <a href="ВАША_ССЫЛКА_НА_BOOSTY" class="btn">Мой Boosty 🎸</a>
+    </section>
+
+    <!-- Футер с нижней картинкой и дублем меню -->
+    <footer>
+        <img src="footer.jpg" alt="Нижний музыкальный баннер">
+        <div class="footer-nav">
+            <a href="#about">Обо мне</a>
+            <a href="#repertoire">Репертуар</a>
+            <a href="#support">Поддержать</a>
+        </div>
+        <p style="color: #555; font-size: 14px;">© 2026 Уличный музыкант. Спасибо за поддержку!</p>
+    </footer>
+
 </body>
 </html>
