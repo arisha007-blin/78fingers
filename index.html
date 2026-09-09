@@ -124,54 +124,230 @@
         <p>Привет! Спасибо, что остановились послушать. Музыка — это моя жизнь, а улица — моя главная сцена. Здесь вы можете посмотреть мой репертуар, заказать песню или поддержать мое творчество.</p>
     </section>
 
-    <!-- Секция: Репертуар -->
+<!-- Секция: Репертуар с аккордеоном -->
 <section id="repertoire">
     <h2>Мой репертуар</h2>
-    <p>Выбирайте любую песню и подходите ко мне на улице:</p>
+    <p style="color: #8a8a8a; margin-bottom: 30px;">Нажмите на любую песню, чтобы открыть текст и аккорды:</p>
 
-    <h3 style="color: #c0c0c0; text-align: left; margin-top: 30px;">Каверы и любимые треки</h3>
+    <h3 style="color: #c0c0c0; text-align: left; margin: 30px 0 15px 0;">Каверы и любимые треки</h3>
     <ul class="repertoire-list">
-        <li>🎵 Сплин — Выхода нет</li>
-        <li>🎵 Баста — Сансара</li>
-        <li>🎵 Ария — Потерянный рай</li>
-        <li>🎵 Чайф — Не со мной</li>
-        <li>🎵 Beyoncé — Halo</li>
-        <li>🎵 Жуки — Батарейка</li>
-        <li>🎵 Папин олимпос — Темно-оранжевый загат</li>
-        <li>🎵 Кипелов (Ария) — Я свободен</li>
-        <li>🎵 Rozhden — Знаешь</li>
-        <li>🎵 Би-2, Алексей Понамарев — Мы не ангелы</li>
-        <li>🎵 Дайте танк(!) — Утро</li>
-        <li>🎵 Нервы — Счастье</li>
-        <li>🎵 Жуки — Танкист</li>
-        <li>🎵 Ария — Штиль</li>
-        <li>🎵 Ляпис Трубецкой — Евпатория</li>
-        <li>🎵 Рита Дакота — Дети рейва</li>
-        <li>🎵 Мураками — 0 км</li>
-        <li>🎵 Гости из будущего — Лучшее в тебе</li>
-        <li>🎵 Lumen — Гореть</li>
-        <li>🎵 Ляпис Трубецкой — В платье белом</li>
-        <li>🎵 Imagine Dragons — Radioactive</li>
-        <li>🎵 Звери — Районы-кварталы</li>
-        <li>🎵 Слот — Круги на воде</li>
-        <li>🎵 Нервы — Кофе мой друг</li>
-        <li>🎵 Imagine Dragons — Demons</li>
-        <li>🎵 Сектор Газа — Лирика</li>
-        <li>🎵 Король и Шут — Проклятый старый дом</li>
-        <li>🎵 Король и Шут — Кукла колдуна</li>
-        <li>🎵 Anastacia & Ben Moody — Everything Burns</li>
-        <li>🎵 Бумбокс — Вахтёрам</li>
-        <li>🎵 Сектор Газа — Туман</li>
-        <li>🎵 Би-2 & Чичерина — Мой рок-н-ролл</li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Сплин — Выхода нет</div>
+            <div class="song-lyrics-container">
+                <pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre>
+            </div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Баста — Сансара</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Ария — Потерянный рай</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Чайф — Не со мной</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Beyoncé — Halo</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Жуки — Батарейка</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Папин олимпос — Темно-оранжевый загат</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Кипелов (Ария) — Я свободен</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Rozhden — Знаешь</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Би-2, Алексей Понамарев — Мы не ангелы</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Дайте танк(!) — Утро</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Нервы — Счастье</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Жуки — Танкист</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Ария — Штиль</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Ляпис Трубецкой — Евпатория</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Рита Дакота — Дети рейва</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Мураками — 0 км</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Гости из будущего — Лучшее в тебе</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Lumen — Гореть</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Ляпис Трубецкой — В платье белом</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Imagine Dragons — Radioactive</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Звери — Районы-кварталы</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Слот — Круги на воде</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Нервы — Кофе мой друг</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Imagine Dragons — Demons</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Сектор Газа — Лирика</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Король и Шут — Проклятый старый дом</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Король и Шут — Кукла колдуна</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Anastacia & Ben Moody — Everything Burns</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Бумбокс — Вахтёрам</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Сектор Газа — Туман</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎵 Би-2 & Чичерина — Мой рок-н-ролл</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
     </ul>
 
-    <h3 style="color: #c0c0c0; text-align: left; margin-top: 40px;">Наши песни</h3>
+    <h3 style="color: #c0c0c0; text-align: left; margin: 40px 0 15px 0;">Наши песни</h3>
     <ul class="repertoire-list">
-        <li>🎸 Дыши со мной</li>
-        <li>🎸 Бескрайний космос</li>
-        <li>🎸 Фонари</li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎸 Дыши со мной</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎸 Бескрайний космос</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
+        <li class="song-item" onclick="toggleSong(this)">
+            <div class="song-title">🎸 Фонари</div>
+            <div class="song-lyrics-container"><pre class="lyrics-placeholder">[Здесь будут слова и аккорды песни]</pre></div>
+        </li>
     </ul>
 </section>
+
+<style>
+    /* Стили для гармошки (аккордеона) */
+    .repertoire-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        list-style: none;
+        max-width: 650px;
+        margin: 0 auto;
+        text-align: left;
+    }
+    .song-item {
+        background: #161616;
+        border: 1px solid #262626;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: border-color 0.3s;
+        cursor: pointer;
+    }
+    .song-item:hover {
+        border-color: #555;
+    }
+    .song-title {
+        padding: 15px 20px;
+        font-size: 16px;
+        color: #d1d1d1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /* Стрелочка справа */
+    .song-title::after {
+        content: '▼';
+        font-size: 11px;
+        color: #8a8a8a;
+        transition: transform 0.3s;
+    }
+    .song-item.active .song-title::after {
+        transform: rotate(180deg);
+        color: #ffffff;
+    }
+    .song-lyrics-container {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+        background: #0f0f0f;
+        padding: 0 20px;
+    }
+    .song-item.active .song-lyrics-container {
+        max-height: 1000px; /* Достаточно для текста */
+        padding: 15px 20px 20px 20px;
+        border-top: 1px solid #262626;
+    }
+    .lyrics-placeholder {
+        font-family: monospace;
+        font-size: 14px;
+        color: #a0a0a0;
+        white-space: pre-wrap;
+        margin: 0;
+    }
+</style>
+
+<script>
+    function toggleSong(element) {
+        element.classList.toggle('active');
+    }
+</script>
 
 <style>
     /* Красивый список репертуара в два столбца на компьютере и в один на телефоне */
