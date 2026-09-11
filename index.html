@@ -364,7 +364,6 @@
         padding: 0 20px;
     }
     .song-item.active .song-lyrics-container {
-        max-height: 1000px; /* Достаточно для текста */
         padding: 15px 20px 20px 20px;
         border-top: 1px solid #262626;
     }
@@ -380,10 +379,16 @@
 <script>
     function toggleSong(element) {
         element.classList.toggle('active');
+        const container = element.querySelector('.song-lyrics-container');
+        
+        // Автоматически вычисляем высоту текста, чтобы ничего не обрезалось
+        if (element.classList.contains('active')) {
+            container.style.maxHeight = container.scrollHeight + 40 + 'px';
+        } else {
+            container.style.maxHeight = null;
+        }
     }
 </script>
-
-<style>
     /* Красивый список репертуара в два столбца на компьютере и в один на телефоне */
     .repertoire-list {
         display: grid;
