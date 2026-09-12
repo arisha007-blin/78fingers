@@ -1,99 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <!-- Эта строчка делает сайт адаптивным для телефонов: -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Уличный музыкант</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыкальный лендинг</title>
+
+    <!-- Подключение тонких весов шрифта Montserrat (100, 200, 300, 400) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
+
     <style>
-       
-        /* Плавная прокрутка для ссылок в меню */
-       html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 140px; /* Отступ сверху при клике на ссылки, чтобы меню ничего не перекрывало */
-}
-
-        /* Черный элегантный фон */
-        /* Настройки для всего текста на сайте */
-body {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;        /* Делаем буквы более тонкими */
-    letter-spacing: 1px;     /* Небольшой комфортный интервал между буквами */
-    line-height: 1.6;        /* Выравниваем высоту строк для читаемости */
-}
-
-/* Настройки для заголовков (H1, H2, H3) */
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 200;        /* Очень тонкие и изящные заголовки */
-    letter-spacing: 3px;     /* Широкое расстояние делает заголовок визуально вытянутым */
-    text-transform: uppercase; /* Все буквы заглавные — выглядит стильно и строго */
-}
-        /* Меню навигации */
-        nav {
-            background-color: #1a1a1a;
-            padding: 15px 0;
-            position: sticky; /* Прилипает к верху при прокрутке */
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid #333;
+        /* Плавная прокрутка и отступ для мобильного меню */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 140px;
         }
 
-        nav a {
-            color: #c0c0c0; /* Серебряный цвет */
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #ffffff;
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
-        }
-
-        /* Секции с текстом */
-        section {
-            padding: 60px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Список песен */
-        ul {
-            list-style-type: none;
+        /* Тёмный фон и тонкий утонченный текст */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;            /* Тонкие буквы */
+            letter-spacing: 1px;         /* Отступ между буквами */
+            line-height: 1.6;            /* Межстрочный интервал */
+            background-color: #0d0d0d;   /* Тёмный фон */
+            color: #e0e0e0;              /* Светлый цвет текста */
+            margin: 0;
             padding: 0;
-            line-height: 2;
-            font-size: 18px;
         }
 
-        /* Стильные серебряные кнопки */
-        .btn {
-            display: inline-block;
-            margin: 10px;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            color: #0b0b0b !important;
-            background: linear-gradient(to right, #c0c0c0, #ffffff);
-            border: none;
+        /* Вытянутые и изящные заголовки */
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;            /* Ультратонкие заглавные буквы */
+            letter-spacing: 3px;         /* Широкий отступ вытягивает буквы */
+            text-transform: uppercase;   /* Заглавные буквы */
+            color: #ffffff;
         }
 
-        /* Футер (низ сайта) */
-        footer {
-            background-color: #0b0b0b;
-            padding-bottom: 30px;
-        }
-
-        .footer-nav { margin: 20px 0; }
-        .footer-nav a { color: #8a8a8a; text-decoration: none; margin: 0 10px; }
-
-        /* Делаем меню столбиком на совсем узких телефонах */
-        @media (max-width: 400px) {
-            nav a { display: block; margin: 10px 0; }
-        }
+        /* Исправление картинок: подстраиваются под экран и не вылезают */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }}
     </style>
 </head>
 <body>
