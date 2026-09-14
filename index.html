@@ -11,6 +11,63 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
 
     <style>
+        /* Единое выравнивание по центру для верхнего и нижнего меню */
+nav, footer, .nav-menu, .footer-nav {
+    display: flex;
+    justify-content: center; /* Выравнивает все элементы строго по центру */
+    align-items: center;
+    flex-wrap: wrap;          /* Переносит ссылки на новую строку на узких экранах */
+    gap: 15px 20px;          /* Одинаковые интервалы между ссылками */
+    padding: 25px 0;
+    width: 100%;             /* Занимает всю ширину контейнера для корректного центрирования */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Единый стиль ссылок для всех меню */
+nav a, footer a, .nav-menu a, .footer-nav a {
+    color: #c0c0c0;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 6px 10px;
+    transition: color 0.3s ease;
+}
+
+/* Цвет ссылок при наведении */
+nav a:hover, footer a:hover, .nav-menu a:hover, .footer-nav a:hover {
+    color: #ffffff;
+}/* Единое выравнивание по центру для верхнего и нижнего меню */
+nav, footer, .nav-menu, .footer-nav {
+    display: flex;
+    justify-content: center; /* Выравнивает все элементы строго по центру */
+    align-items: center;
+    flex-wrap: wrap;          /* Переносит ссылки на новую строку на узких экранах */
+    gap: 15px 20px;          /* Одинаковые интервалы между ссылками */
+    padding: 25px 0;
+    width: 100%;             /* Занимает всю ширину контейнера для корректного центрирования */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Единый стиль ссылок для всех меню */
+nav a, footer a, .nav-menu a, .footer-nav a {
+    color: #c0c0c0;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 6px 10px;
+    transition: color 0.3s ease;
+}
+
+/* Цвет ссылок при наведении */
+nav a:hover, footer a:hover, .nav-menu a:hover, .footer-nav a:hover {
+    color: #ffffff;
+}
         /* Плавная прокрутка и отступ для мобильного меню */
         html {
             scroll-behavior: smooth;
